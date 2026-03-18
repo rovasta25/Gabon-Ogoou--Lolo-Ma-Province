@@ -79,18 +79,27 @@ function setFieldState(fieldId, errId, isValid) {
 function handleSubmit(e) {
   e.preventDefault();
   var valid = true;
+  var emailField = document.getElementById('email');
+  var ddnField = document.getElementById('ddn');
+  var navigationField = document.getElementById('navigation');
+  var formContent = document.getElementById('formContent');
+  var successMsg = document.getElementById('successMsg');
 
-  var email = document.getElementById('email').value;
+  if (!emailField || !ddnField || !navigationField || !formContent || !successMsg) {
+    return;
+  }
+
+  var email = emailField.value;
   var emailOk = validateEmail(email);
   setFieldState('email', 'err-email', emailOk);
   if (!emailOk) valid = false;
 
-  var ddn = document.getElementById('ddn').value;
+  var ddn = ddnField.value;
   var ddnOk = validateDate(ddn);
   setFieldState('ddn', 'err-ddn', ddnOk);
   if (!ddnOk) valid = false;
 
-  var nav = document.getElementById('navigation').value;
+  var nav = navigationField.value;
   var navOk = nav !== '';
   setFieldState('navigation', 'err-navigation', navOk);
   if (!navOk) valid = false;
@@ -105,8 +114,8 @@ function handleSubmit(e) {
   }
 
   if (valid) {
-    document.getElementById('formContent').style.display = 'none';
-    document.getElementById('successMsg').classList.add('show');
+    formContent.style.display = 'none';
+    successMsg.classList.add('show');
   }
 }
 
