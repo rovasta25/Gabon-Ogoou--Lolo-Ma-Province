@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — À la découverte de l'Ogooué-Lolo</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="contact-page">
+
+<!-- ===== NAVIGATION ===== -->
+<nav>
+  <div class="nav-container">
+    <a class="nav-brand" href="../index.html">
+      <div class="nav-brand-flag"></div>
+      <span class="nav-brand-text">Rovasta · IST</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="gabon.html">Le Gabon</a></li>
+      <li><a href="ogoue-lolo.html">Ogooué-Lolo</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Afficher ou masquer le menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<div class="page-hero">
+  <span class="eyebrow">Votre avis compte</span>
+  <h1 class="page-hero-title">Contactez-nous</h1>
+  <p class="page-hero-desc">Partagez votre expérience de navigation, vos impressions et vos commentaires sur ce site.</p>
+</div>
+
+<!-- ===== FORMULAIRE ===== -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Informations -->
+      <div class="contact-info-box">
+        <h3>Restons en contact</h3>
+        <p>Vos retours sont précieux pour améliorer ce projet académique. N'hésitez pas à laisser un message.</p>
+        <ul class="contact-list">
+          <li>
+            <div class="c-icon">📧</div>
+            <span>rova.mouandza@ist-gabon.edu</span>
+          </li>
+          <li>
+            <div class="c-icon">🏫</div>
+            <span>IST Libreville, Gabon</span>
+          </li>
+          <li>
+            <div class="c-icon">📚</div>
+            <span>Licence 2 · Génie Logiciel</span>
+          </li>
+          <li>
+            <div class="c-icon">📍</div>
+            <span>Ogooué-Lolo, Gabon</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="form-card">
+        <div id="formContent">
+          <h2 class="form-title">Formulaire de contact</h2>
+          <p class="form-subtitle">Les champs marqués d'un <span style="color:#dc3545">*</span> sont obligatoires.</p>
+
+          <form id="contactForm" novalidate onsubmit="handleSubmit(event)">
+
+            <!-- E-mail et Date -->
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="email">Adresse e-mail <span class="req">*</span></label>
+                <input type="email" class="form-control" id="email" placeholder="exemple@mail.com" />
+                <div class="field-err" id="err-email">Veuillez saisir une adresse e-mail valide.</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="ddn">Date de naissance <span class="req">*</span></label>
+                <input type="text" class="form-control" id="ddn" placeholder="jj/mm/aaaa" maxlength="10" />
+                <div class="field-err" id="err-ddn">Format invalide. Utilisez jj/mm/aaaa et vérifiez la date.</div>
+              </div>
+            </div>
+
+            <hr class="form-hr">
+
+            <!-- Navigation -->
+            <div class="form-group">
+              <label class="form-label" for="navigation">Comment trouvez-vous la navigation ? <span class="req">*</span></label>
+              <select class="form-control" id="navigation">
+                <option value="">— Sélectionner —</option>
+                <option value="simple">Simple</option>
+                <option value="correcte">Correcte</option>
+                <option value="compliquée">Compliquée</option>
+              </select>
+              <div class="field-err" id="err-navigation">Veuillez sélectionner une option.</div>
+            </div>
+
+            <hr class="form-hr">
+
+            <!-- Qualités (cases à cocher) -->
+            <div class="form-group">
+              <label class="form-label">Qualités du site (plusieurs choix possibles)</label>
+              <div class="check-group">
+                <label class="check-item"><input type="checkbox" name="qualite" value="instructif"> Instructif</label>
+                <label class="check-item"><input type="checkbox" name="qualite" value="esthétique"> Esthétique</label>
+                <label class="check-item"><input type="checkbox" name="qualite" value="clair"> Clair</label>
+                <label class="check-item"><input type="checkbox" name="qualite" value="pratique"> Pratique</label>
+              </div>
+            </div>
+
+            <hr class="form-hr">
+
+            <!-- Source (boutons radio) -->
+            <div class="form-group">
+              <label class="form-label">Comment avez-vous connu ce site ? <span class="req">*</span></label>
+              <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="connu" value="amis"> Amis</label>
+                <label class="radio-item"><input type="radio" name="connu" value="presse"> Presse</label>
+                <label class="radio-item"><input type="radio" name="connu" value="moteur"> Moteur de recherche</label>
+                <label class="radio-item"><input type="radio" name="connu" value="autre"> Autre</label>
+              </div>
+              <div class="field-err" id="err-connu">Veuillez sélectionner une option.</div>
+            </div>
+
+            <hr class="form-hr">
+
+            <!-- Commentaires -->
+            <div class="form-group">
+              <label class="form-label" for="commentaire">Commentaires</label>
+              <textarea class="form-control" id="commentaire" rows="4" placeholder="Partagez vos impressions, suggestions ou questions…"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-reset-form" onclick="resetForm()">Réinitialiser</button>
+              <button type="submit" class="btn-submit">Envoyer le message →</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Message de succès -->
+        <div class="success-msg" id="successMsg">
+          <div class="success-icon-wrap">✅</div>
+          <h3>Message envoyé !</h3>
+          <p>Merci pour votre retour. Votre avis est précieux et sera pris en compte.</p>
+          <button class="btn btn-green" style="margin-top:24px" onclick="resetForm()">Envoyer un autre message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PIED DE PAGE ===== -->
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-logo">À la découverte de l'Ogooué-Lolo</div>
+    <p class="footer-desc">Le poumon vert du Gabon — Projet académique de Licence 2 Génie Logiciel à l'IST.</p>
+    <hr class="footer-hr">
+    <div class="footer-bottom">
+      <span>© 2026 MOUANDZA MIKOUMOU Rova Chrismi Richie — IST Gabon</span>
+      <div class="footer-nav">
+        <a href="../index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="gabon.html">Le Gabon</a>
+        <a href="ogoue-lolo.html">Ogooué-Lolo</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
