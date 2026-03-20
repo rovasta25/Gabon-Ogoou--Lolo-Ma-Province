@@ -31,7 +31,9 @@ function toggleAccordion(btn) {
 
 /* ===== VALIDATION EMAIL ===== */
 function validateEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+  var trimmed = email.trim();
+  if (/^[A-Z]/.test(trimmed)) return false; // Ne pas commencer par une majuscule
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed);
 }
 
 /* ===== VALIDATION DATE jj/mm/aaaa ===== */
