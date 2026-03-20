@@ -72,7 +72,7 @@
           <h2 class="form-title">Formulaire de contact</h2>
           <p class="form-subtitle">Les champs marqués d'un <span class="req">*</span> sont obligatoires.</p>
 
-          <form id="contactForm" novalidate onsubmit="handleSubmit(event)">
+          <form id="contactForm" novalidate>
 
             <!-- E-mail et Date -->
             <div class="form-row">
@@ -138,7 +138,7 @@
             </div>
 
             <div class="form-actions">
-              <button type="button" class="btn-reset-form" onclick="resetForm()">Réinitialiser</button>
+              <button type="button" class="btn-reset-form" data-reset-form>Réinitialiser</button>
               <button type="submit" class="btn-submit">Envoyer le message →</button>
             </div>
           </form>
@@ -149,7 +149,7 @@
           <div class="success-icon-wrap">✅</div>
           <h3>Message envoyé !</h3>
           <p>Merci pour votre retour. Votre avis est précieux et sera pris en compte.</p>
-          <button class="btn btn-green success-action" onclick="resetForm()">Envoyer un autre message</button>
+          <button type="button" class="btn btn-green success-action" data-reset-form>Envoyer un autre message</button>
         </div>
       </div>
     </div>

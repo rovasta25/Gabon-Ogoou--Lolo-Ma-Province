@@ -144,9 +144,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function closeMenu() {
     if (!navLinks || !navToggle) return;
     navLinks.classList.remove('is-open');
-    if (navContainer) {
-      navContainer.classList.remove('is-open');
-    }
     navToggle.classList.remove('is-open');
     navToggle.setAttribute('aria-expanded', 'false');
   }
@@ -154,9 +151,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function toggleMenu() {
     if (!navLinks || !navToggle) return;
     const opened = navLinks.classList.toggle('is-open');
-    if (navContainer) {
-      navContainer.classList.toggle('is-open', opened);
-    }
     navToggle.classList.toggle('is-open', opened);
     navToggle.setAttribute('aria-expanded', opened ? 'true' : 'false');
   }
@@ -187,6 +181,21 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   initDateInput();
+
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', handleSubmit);
+  }
+
+  document.querySelectorAll('[data-reset-form]').forEach(function (button) {
+    button.addEventListener('click', resetForm);
+  });
+
+  document.querySelectorAll('.accordion-btn').forEach(function (button) {
+    button.addEventListener('click', function () {
+      toggleAccordion(button);
+    });
+  });
 
   var emailInput = document.getElementById('email');
   if (emailInput) {
