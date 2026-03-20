@@ -95,6 +95,50 @@ nav {
   text-decoration: none;
   flex-shrink: 0;
 }
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+.nav-search-input {
+  width: min(240px, 32vw);
+  min-width: 150px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.08);
+  color: var(--white);
+  font-size: 13px;
+  outline: none;
+  transition: var(--transition);
+}
+.nav-search-input::placeholder {
+  color: rgba(255,255,255,.62);
+}
+.nav-search-input:focus {
+  border-color: rgba(240,208,128,.58);
+  box-shadow: 0 0 0 3px rgba(240,208,128,.14);
+  background: rgba(255,255,255,.12);
+}
+.nav-search-input.no-result {
+  border-color: rgba(220,53,69,.72);
+  box-shadow: 0 0 0 3px rgba(220,53,69,.14);
+}
+.nav-search-btn {
+  padding: 9px 14px;
+  border: 1px solid rgba(240,208,128,.35);
+  border-radius: 999px;
+  background: rgba(201,168,76,.18);
+  color: var(--gold-light);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.nav-search-btn:hover {
+  background: rgba(201,168,76,.28);
+}
 .nav-brand-flag {
   display: flex; flex-direction: column;
   width: 42px; height: 30px; border-radius: 6px; overflow: hidden;
@@ -112,7 +156,7 @@ nav {
   gap: 6px;
   list-style: none;
   flex-wrap: nowrap;
-  margin-left: auto;
+  margin-left: 0;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -346,6 +390,13 @@ nav {
   line-height: 1.5;
   backdrop-filter: blur(6px);
 }
+.search-hit {
+  background: linear-gradient(180deg, rgba(240,208,128,.1), rgba(240,208,128,.32));
+  box-shadow: 0 0 0 2px rgba(201,168,76,.2);
+  border-radius: 8px;
+  scroll-margin-top: 110px;
+  transition: box-shadow .2s ease, background .2s ease;
+}
 .media-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -521,6 +572,15 @@ footer { background: var(--green-dark); color: rgba(255,255,255,.6); padding: 32
   .nav-container { padding: 14px 18px; flex-wrap: wrap; gap: 14px; }
   .nav-toggle { margin-left: 0; }
   .nav-brand-text { font-size: 13px; }
+  .nav-search {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+  }
+  .nav-search-input {
+    width: 100%;
+    min-width: 0;
+  }
   .two-col, .two-col.reverse { grid-template-columns: 1fr; direction: ltr; }
   .contact-grid { grid-template-columns: 1fr; }
   .contact-info-box { position: static; }

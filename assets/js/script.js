@@ -140,6 +140,198 @@ document.addEventListener('DOMContentLoaded', function () {
   const navLinks = document.getElementById('navLinks');
   const navContainer = document.querySelector('.nav-container');
   const navToggle = document.getElementById('navToggle');
+  const navSearchForm = document.getElementById('navSearchForm');
+  const navSearchInput = document.getElementById('navSearchInput');
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const contentSelectors = [
+    '.hero-title',
+    '.hero-subtitle',
+    '.page-hero-title',
+    '.page-hero-desc',
+    '.section-title',
+    '.section-desc',
+    '.card-title',
+    '.card-text',
+    '.text-col h2',
+    '.text-col p',
+    '.feature-list li',
+    '.gallery-caption',
+    '.media-caption',
+    '.accordion-inner p',
+    '.author-bio',
+    '.author-meta-item span',
+    '.form-label',
+    '.contact-list span',
+    '.stat-label',
+    '.stat-number',
+    'td',
+    'th'
+  ].join(', ');
+  const pageCache = {};
+
+  function normalizeText(value) {
+    return (value || '')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, ' ')
+      .replace(/[^a-z0-9\s'-]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function escapeRegExp(value) {
+    return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function getRoutes() {
+    const inPagesFolder = window.location.pathname.includes('/pages/');
+    if (inPagesFolder) {
+      return [
+        { path: '../index.html', key: 'index.html' },
+        { path: 'a-propos.html', key: 'a-propos.html' },
+        { path: 'gabon.html', key: 'gabon.html' },
+        { path: 'ogoue-lolo.html', key: 'ogoue-lolo.html' },
+        { path: 'contact.html', key: 'contact.html' }
+      ];
+    }
+
+    return [
+      { path: 'index.html', key: 'index.html' },
+      { path: 'pages/a-propos.html', key: 'a-propos.html' },
+      { path: 'pages/gabon.html', key: 'gabon.html' },
+      { path: 'pages/ogoue-lolo.html', key: 'ogoue-lolo.html' },
+      { path: 'pages/contact.html', key: 'contact.html' }
+    ];
+  }
+
+  function scoreText(text, queryTerms) {
+    return queryTerms.reduce(function (total, term) {
+      const regex = new RegExp(escapeRegExp(term), 'g');
+      const matches = text.match(regex);
+      return total + (matches ? matches.length : 0);
+    }, 0);
+  }
+
+  function clearSearchHits() {
+    document.querySelectorAll('.search-hit').forEach(function (element) {
+      element.classList.remove('search-hit');
+    });
+  }
+
+  function searchInCurrentPage(query) {
+    clearSearchHits();
+    if (navSearchInput) {
+      navSearchInput.classList.remove('no-result');
+    }
+
+    if (!query) {
+      return null;
+    }
+
+    const normalizedQuery = normalizeText(query);
+    const candidates = document.querySelectorAll(contentSelectors);
+
+    let firstMatch = null;
+
+    candidates.forEach(function (element) {
+      const content = normalizeText(element.textContent);
+      if (content.includes(normalizedQuery)) {
+        element.classList.add('search-hit');
+        if (!firstMatch) {
+          firstMatch = element;
+        }
+      }
+    });
+
+    if (firstMatch) {
+      firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    return firstMatch;
+  }
+
+  async function getPageText(route) {
+    if (pageCache[route.key]) {
+      return pageCache[route.key];
+    }
+
+    if (route.key === currentPath) {
+      const localText = normalizeText(
+        Array.from(document.querySelectorAll(contentSelectors))
+          .map(function (element) { return element.textContent; })
+          .join(' ')
+      );
+      pageCache[route.key] = localText;
+      return localText;
+    }
+
+    const response = await fetch(route.path, { cache: 'no-cache' });
+    const html = await response.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+
+    doc.querySelectorAll('nav, footer, script').forEach(function (element) {
+      element.remove();
+    });
+
+    const text = normalizeText(
+      Array.from(doc.querySelectorAll(contentSelectors))
+        .map(function (element) { return element.textContent; })
+        .join(' ')
+    );
+
+    pageCache[route.key] = text;
+    return text;
+  }
+
+  async function searchSite(query) {
+    const normalizedQuery = normalizeText(query);
+    const queryTerms = normalizedQuery.split(' ').filter(Boolean);
+
+    if (!queryTerms.length) {
+      clearSearchHits();
+      return;
+    }
+
+    const localMatch = searchInCurrentPage(query);
+    if (localMatch) {
+      return;
+    }
+
+    try {
+      const routes = getRoutes();
+      const otherRoutes = routes.filter(function (route) {
+        return route.key !== currentPath;
+      });
+
+      const results = await Promise.all(
+        otherRoutes.map(async function (route) {
+          const text = await getPageText(route);
+          return {
+            route: route.path,
+            score: scoreText(text, queryTerms)
+          };
+        })
+      );
+
+      const bestMatch = results
+        .filter(function (result) { return result.score > 0; })
+        .sort(function (a, b) { return b.score - a.score; })[0];
+
+      if (bestMatch) {
+        const targetUrl = new URL(bestMatch.route, window.location.href);
+        targetUrl.searchParams.set('search', query);
+        window.location.href = targetUrl.toString();
+        return;
+      }
+    } catch (error) {
+      console.warn('Recherche inter-pages indisponible :', error);
+    }
+
+    if (navSearchInput) {
+      navSearchInput.classList.add('no-result');
+    }
+  }
 
   function closeMenu() {
     if (!navLinks || !navToggle) return;
@@ -157,6 +349,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (navToggle) {
     navToggle.addEventListener('click', toggleMenu);
+  }
+
+  if (navSearchForm && navSearchInput) {
+    navSearchForm.addEventListener('submit', async function (event) {
+      event.preventDefault();
+      await searchSite(navSearchInput.value.trim());
+    });
+
+    navSearchInput.addEventListener('input', function () {
+      navSearchInput.classList.remove('no-result');
+      if (!navSearchInput.value.trim()) {
+        clearSearchHits();
+      }
+    });
+
+    navSearchInput.addEventListener('search', function () {
+      if (!navSearchInput.value.trim()) {
+        clearSearchHits();
+      }
+    });
   }
 
   if (navLinks) {
@@ -216,5 +428,11 @@ document.addEventListener('DOMContentLoaded', function () {
     navEl.addEventListener('change', function () {
       setFieldState('navigation', 'err-navigation', this.value !== '');
     });
+  }
+
+  const initialSearch = new URLSearchParams(window.location.search).get('search');
+  if (initialSearch && navSearchInput) {
+    navSearchInput.value = initialSearch;
+    searchInCurrentPage(initialSearch);
   }
 });
