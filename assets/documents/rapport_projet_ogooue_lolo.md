@@ -39,7 +39,7 @@ Le projet a ete developpe a l'aide des technologies suivantes :
 
 - **HTML5** pour la structure des pages ;
 - **CSS3** pour la mise en forme, la charte graphique et le responsive design ;
-- **JavaScript** pour la dynamique du menu, l'accordeon et certaines interactions ;
+- **JavaScript** pour la dynamique du menu, l'accordeon, la recherche interne et certaines interactions ;
 - **Google Fonts** pour l'amelioration de la typographie ;
 - **Wikimedia Commons** pour les images et videos reutilisables integrees dans le site.
 
@@ -137,6 +137,8 @@ Le site final comprend egalement :
 - un systeme de mise en avant de la page active ;
 - un accordeon sur la page historique ;
 - un formulaire avec validation ;
+- une barre de recherche integree au header ;
+- un systeme de recherche inter-pages en JavaScript permettant de trouver un mot sur la page courante ou de rediriger vers la page la plus pertinente ;
 - des documents telechargeables, notamment le CV et le rapport.
 
 ## Fonctionnalites principales
@@ -148,6 +150,8 @@ Le site propose les fonctionnalites suivantes :
 - integration d'images et de videos locales ;
 - fond d'ambiance sur toutes les pages ;
 - sections galerie pour mieux presenter les medias ;
+- barre de recherche fixe dans la navigation ;
+- recherche globale entre les pages du site ;
 - formulaire de contact avec controle des champs ;
 - telechargement du CV et du rapport.
 
@@ -173,6 +177,7 @@ Ce projet m'a permis de renforcer plusieurs competences :
 - correction de bugs d'interface ;
 - travail sur le responsive design ;
 - integration de ressources multimedia ;
+- mise en place d'une logique de recherche en JavaScript sur un site statique ;
 - capacite a concevoir une interface plus attractive ;
 - mise en valeur d'un sujet culturel et territorial par le numerique.
 

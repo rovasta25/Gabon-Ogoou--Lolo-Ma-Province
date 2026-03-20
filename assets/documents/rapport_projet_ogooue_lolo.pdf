@@ -1,52 +1,47 @@
 %PDF-1.4
-1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+1 0 obj`n<< /Type /Catalog /Pages 2 0 R >>
 endobj
-2 0 obj
-<< /Type /Pages /Kids [ 4 0 R 6 0 R 8 0 R 10 0 R 12 0 R 14 0 R ] /Count 6 >>
+2 0 obj`n<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] /Count 6 >>
 endobj
-3 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+3 0 obj`n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
-4 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+4 0 obj`n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
 endobj
-5 0 obj
-<< /Length 2177 >>
+5 0 obj`n<< /Length 2267 >>
 stream
 BT
 /F1 12 Tf
-14 TL
 50 790 Td
-(RAPPORT DE PROJET) Tj
+14 TL
+(# Rapport de Projet) Tj
 T*
 () Tj
 T*
-(TITRE DU PROJET) Tj
+(## Titre du projet) Tj
 T*
 () Tj
 T*
-(A la decouverte de l'Ogooue-Lolo : le poumon vert du Gabon) Tj
+(**A la decouverte de l'Ogooue-Lolo : le poumon vert du Gabon**) Tj
 T*
 () Tj
 T*
-(INFORMATIONS SUR L'AUTEUR) Tj
+(## Informations sur l'auteur) Tj
 T*
 () Tj
 T*
-(- Nom : MOUANDZA MIKOUMOU Rova Chrismi Richie) Tj
+(- **Nom** : MOUANDZA MIKOUMOU Rova Chrismi Richie) Tj
 T*
-(- Niveau : Licence 2) Tj
+(- **Niveau** : Licence 2) Tj
 T*
-(- Filiere : Genie Logiciel) Tj
+(- **Filiere** : Genie Logiciel) Tj
 T*
-(- Etablissement : Institut des Sciences et Techniques \(IST\), Libreville) Tj
+(- **Etablissement** : Institut des Sciences et Techniques \(IST\), Libreville) Tj
 T*
-(- Annee academique : 2025-2026) Tj
+(- **Annee academique** : 2025-2026) Tj
 T*
 () Tj
 T*
-(INTRODUCTION) Tj
+(## Introduction) Tj
 T*
 () Tj
 T*
@@ -70,7 +65,7 @@ T*
 T*
 () Tj
 T*
-(PROBLEMATIQUE) Tj
+(## Problematique) Tj
 T*
 () Tj
 T*
@@ -82,7 +77,7 @@ T*
 T*
 () Tj
 T*
-(OBJECTIFS DU PROJET) Tj
+(## Objectifs du projet) Tj
 T*
 () Tj
 T*
@@ -104,41 +99,40 @@ T*
 T*
 () Tj
 T*
-(TECHNOLOGIES UTILISEES) Tj
+(## Technologies utilisees) Tj
 T*
-ET
-
-endstream
-endobj
-6 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
-endobj
-7 0 obj
-<< /Length 2390 >>
-stream
-BT
-/F1 12 Tf
-14 TL
-50 790 Td
 () Tj
 T*
 (Le projet a ete developpe a l'aide des technologies suivantes :) Tj
 T*
 () Tj
 T*
-(- HTML5 pour la structure des pages ;) Tj
+(- **HTML5** pour la structure des pages ;) Tj
 T*
-(- CSS3 pour la mise en forme, la charte graphique et le responsive design ;) Tj
+ET
+endstream
+endobj
+6 0 obj`n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj`n<< /Length 2493 >>
+stream
+BT
+/F1 12 Tf
+50 790 Td
+14 TL
+(- **CSS3** pour la mise en forme, la charte graphique et le responsive design ;) Tj
 T*
-(- JavaScript pour la dynamique du menu, l'accordeon et certaines interactions ;) Tj
+(- **JavaScript** pour la dynamique du menu, l'accordeon, la recherche interne et certaines) Tj
 T*
-(- Google Fonts pour l'amelioration de la typographie ;) Tj
+(interactions ;) Tj
 T*
-(- Wikimedia Commons pour les images et videos reutilisables integrees dans le site.) Tj
+(- **Google Fonts** pour l'amelioration de la typographie ;) Tj
+T*
+(- **Wikimedia Commons** pour les images et videos reutilisables integrees dans le site.) Tj
 T*
 () Tj
 T*
-(STRUCTURE DU PROJET) Tj
+(## Structure du projet) Tj
 T*
 () Tj
 T*
@@ -146,15 +140,15 @@ T*
 T*
 () Tj
 T*
-(- Accueil : presentation generale du projet ;) Tj
+(- **Accueil** : presentation generale du projet ;) Tj
 T*
-(- A propos : presentation de l'auteur et acces aux documents a telecharger ;) Tj
+(- **A propos** : presentation de l'auteur et acces aux documents a telecharger ;) Tj
 T*
-(- Le Gabon : informations generales sur le pays ;) Tj
+(- **Le Gabon** : informations generales sur le pays ;) Tj
 T*
-(- Ogooue-Lolo : presentation detaillee de la province ;) Tj
+(- **Ogooue-Lolo** : presentation detaillee de la province ;) Tj
 T*
-(- Contact : formulaire de prise de contact et de retour utilisateur.) Tj
+(- **Contact** : formulaire de prise de contact et de retour utilisateur.) Tj
 T*
 () Tj
 T*
@@ -178,51 +172,39 @@ T*
 T*
 () Tj
 T*
-(APERCU DE L'OGOOUE-LOLO) Tj
+(## Apercu de l'Ogooue-Lolo) Tj
 T*
 () Tj
 T*
 (La province de l'Ogooue-Lolo se situe dans le centre-est du Gabon. Son chef-lieu est) Tj
 T*
-(Koulamoutou, et elle comprend egalement des localites importantes comme Lastoursville et) Tj
+(**Koulamoutou**, et elle comprend egalement des localites importantes comme) Tj
 T*
-(Pana. Cette province est connue pour la richesse de ses forets, la presence de grands cours) Tj
+(**Lastoursville** et **Pana**. Cette province est connue pour la richesse de ses forets, la) Tj
 T*
-(d'eau et son fort ancrage culturel.) Tj
+(presence de grands cours d'eau et son fort ancrage culturel.) Tj
 T*
 () Tj
 T*
 (Sur le plan humain, l'Ogooue-Lolo est marquee par la presence de plusieurs groupes ethniques) Tj
 T*
-(gabonais, notamment les Nzebi, les Sango, les Punu, les Akélé et d'autres communautes de) Tj
+(gabonais, notamment les **Nzebi**, les **Sango**, les **Punu**, les **Akl** et d'autres) Tj
 T*
-(la region. Cette diversite se traduit par des langues, des traditions, des pratiques) Tj
+(communautes de la region. Cette diversite se traduit par des langues, des traditions, des) Tj
 T*
-(culturelles et des formes d'expression qui enrichissent fortement l'identite de la province.) Tj
+(pratiques culturelles et des formes d'expression qui enrichissent fortement l'identite de la) Tj
+T*
+(province.) Tj
 T*
 () Tj
 T*
 (La province est traversee par des axes de communication importants. Sur le plan national, la) Tj
 T*
-(ligne du Transgabonais joue un role majeur dans les deplacements et les echanges, notamment) Tj
+(ligne du **Transgabonais** joue un role majeur dans les deplacements et les echanges,) Tj
 T*
-(du cote de Lastoursville, tandis que les routes et les voies fluviales contribuent aussi a) Tj
+(notamment du cote de **Lastoursville**, tandis que les routes et les voies fluviales) Tj
 T*
-ET
-
-endstream
-endobj
-8 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 9 0 R >>
-endobj
-9 0 obj
-<< /Length 2029 >>
-stream
-BT
-/F1 12 Tf
-14 TL
-50 790 Td
-(la liaison entre les localites.) Tj
+(contribuent aussi a la liaison entre les localites.) Tj
 T*
 () Tj
 T*
@@ -234,6 +216,17 @@ T*
 T*
 (- l'agriculture vivriere ;) Tj
 T*
+ET
+endstream
+endobj
+8 0 obj`n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj`n<< /Length 2255 >>
+stream
+BT
+/F1 12 Tf
+50 790 Td
+14 TL
 (- le commerce local ;) Tj
 T*
 (- certaines activites liees au transport ;) Tj
@@ -248,7 +241,7 @@ T*
 T*
 () Tj
 T*
-(TRAVAIL REALISE) Tj
+(## Travail realise) Tj
 T*
 () Tj
 T*
@@ -256,7 +249,7 @@ T*
 T*
 () Tj
 T*
-(1. Reorganisation des fichiers) Tj
+(### 1. Reorganisation des fichiers) Tj
 T*
 () Tj
 T*
@@ -268,7 +261,7 @@ T*
 T*
 () Tj
 T*
-(2. Correction technique du site) Tj
+(### 2. Correction technique du site) Tj
 T*
 () Tj
 T*
@@ -290,7 +283,7 @@ T*
 T*
 () Tj
 T*
-(3. Amelioration du design) Tj
+(### 3. Amelioration du design) Tj
 T*
 () Tj
 T*
@@ -310,23 +303,9 @@ T*
 T*
 (- adaptation du site aux ecrans mobiles.) Tj
 T*
-ET
-
-endstream
-endobj
-10 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 11 0 R >>
-endobj
-11 0 obj
-<< /Length 1876 >>
-stream
-BT
-/F1 12 Tf
-14 TL
-50 790 Td
 () Tj
 T*
-(4. Integration de medias reels) Tj
+(### 4. Integration de medias reels) Tj
 T*
 () Tj
 T*
@@ -336,14 +315,25 @@ T*
 T*
 () Tj
 T*
-(- 10 images en rapport avec le Gabon et l'Ogooue-Lolo ;) Tj
+(- **10 images** en rapport avec le Gabon et l'Ogooue-Lolo ;) Tj
 T*
-(- 5 videos permettant d'ajouter une dimension plus immersive au site ;) Tj
+(- **5 videos** permettant d'ajouter une dimension plus immersive au site ;) Tj
 T*
 (- des images de fond appliquees aux differentes pages pour renforcer l'ambiance visuelle ;) Tj
 T*
 (- une meilleure coherence entre les sections de texte et les medias affiches.) Tj
 T*
+ET
+endstream
+endobj
+10 0 obj`n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj`n<< /Length 2059 >>
+stream
+BT
+/F1 12 Tf
+50 790 Td
+14 TL
 () Tj
 T*
 (Ces ressources illustrent notamment :) Tj
@@ -354,19 +344,19 @@ T*
 T*
 (- la foret tropicale gabonaise ;) Tj
 T*
-(- les paysages de la Lopé ;) Tj
+(- les paysages de la Lop ;) Tj
 T*
 (- le fleuve Ogooue ;) Tj
 T*
 (- le patrimoine culturel Punu ;) Tj
 T*
-(- des scenes video liées a la nature, au coucher de soleil, a la culture et a la vie) Tj
+(- des scenes video lies a la nature, au coucher de soleil, a la culture et a la vie) Tj
 T*
 (gabonaise.) Tj
 T*
 () Tj
 T*
-(5. Enrichissement fonctionnel) Tj
+(### 5. Enrichissement fonctionnel) Tj
 T*
 () Tj
 T*
@@ -382,11 +372,17 @@ T*
 T*
 (- un formulaire avec validation ;) Tj
 T*
+(- une barre de recherche integree au header ;) Tj
+T*
+(- un systeme de recherche inter-pages en JavaScript permettant de trouver un mot sur la page) Tj
+T*
+(courante ou de rediriger vers la page la plus pertinente ;) Tj
+T*
 (- des documents telechargeables, notamment le CV et le rapport.) Tj
 T*
 () Tj
 T*
-(FONCTIONNALITES PRINCIPALES) Tj
+(## Fonctionnalites principales) Tj
 T*
 () Tj
 T*
@@ -404,28 +400,18 @@ T*
 T*
 (- sections galerie pour mieux presenter les medias ;) Tj
 T*
+(- barre de recherche fixe dans la navigation ;) Tj
+T*
+(- recherche globale entre les pages du site ;) Tj
+T*
 (- formulaire de contact avec controle des champs ;) Tj
 T*
 (- telechargement du CV et du rapport.) Tj
 T*
 () Tj
 T*
-(DIFFICULTES RENCONTREES) Tj
+(## Difficultes rencontrees) Tj
 T*
-ET
-
-endstream
-endobj
-12 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 13 0 R >>
-endobj
-13 0 obj
-<< /Length 2228 >>
-stream
-BT
-/F1 12 Tf
-14 TL
-50 790 Td
 () Tj
 T*
 (Plusieurs difficultes ont ete rencontrees durant la conception :) Tj
@@ -444,6 +430,17 @@ T*
 T*
 (- necessite de rechercher des contenus plus coherents et plus professionnels.) Tj
 T*
+ET
+endstream
+endobj
+12 0 obj`n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 13 0 R >>
+endobj
+13 0 obj`n<< /Length 2387 >>
+stream
+BT
+/F1 12 Tf
+50 790 Td
+14 TL
 () Tj
 T*
 (Ces difficultes ont ete resolues progressivement par une reprise page par page, une) Tj
@@ -452,7 +449,7 @@ T*
 T*
 () Tj
 T*
-(APPORTS PEDAGOGIQUES) Tj
+(## Apports pedagogiques) Tj
 T*
 () Tj
 T*
@@ -470,13 +467,15 @@ T*
 T*
 (- integration de ressources multimedia ;) Tj
 T*
+(- mise en place d'une logique de recherche en JavaScript sur un site statique ;) Tj
+T*
 (- capacite a concevoir une interface plus attractive ;) Tj
 T*
 (- mise en valeur d'un sujet culturel et territorial par le numerique.) Tj
 T*
 () Tj
 T*
-(BILAN) Tj
+(## Bilan) Tj
 T*
 () Tj
 T*
@@ -500,13 +499,13 @@ T*
 T*
 (Il permet egalement de mieux faire connaitre des elements concrets de l'Ogooue-Lolo, comme) Tj
 T*
-(Koulamoutou, Lastoursville, les peuples de la province, les infrastructures de transport et) Tj
+(**Koulamoutou**, **Lastoursville**, les peuples de la province, les infrastructures de) Tj
 T*
-(les principales activites economiques locales.) Tj
+(transport et les principales activites economiques locales.) Tj
 T*
 () Tj
 T*
-(PERSPECTIVES) Tj
+(## Perspectives) Tj
 T*
 () Tj
 T*
@@ -514,20 +513,6 @@ T*
 T*
 () Tj
 T*
-ET
-
-endstream
-endobj
-14 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 15 0 R >>
-endobj
-15 0 obj
-<< /Length 931 >>
-stream
-BT
-/F1 12 Tf
-14 TL
-50 790 Td
 (- une carte interactive du Gabon et des provinces ;) Tj
 T*
 (- une version bilingue francais-anglais ;) Tj
@@ -544,14 +529,25 @@ T*
 T*
 () Tj
 T*
-(CONCLUSION) Tj
+(## Conclusion) Tj
 T*
 () Tj
 T*
-(Le projet A la decouverte de l'Ogooue-Lolo repond a l'objectif de concevoir un site web) Tj
+(Le projet **A la decouverte de l'Ogooue-Lolo** repond a l'objectif de concevoir un site web) Tj
 T*
 (educatif, informatif et visuellement attractif. Il met en avant une province importante du) Tj
 T*
+ET
+endstream
+endobj
+14 0 obj`n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 15 0 R >>
+endobj
+15 0 obj`n<< /Length 307 >>
+stream
+BT
+/F1 12 Tf
+50 790 Td
+14 TL
 (Gabon, tout en demontrant les competences techniques acquises en Licence 2 Genie Logiciel.) Tj
 T*
 () Tj
@@ -560,30 +556,14 @@ T*
 T*
 (valorisation culturelle dans un seul projet concret.) Tj
 T*
+() Tj
+T*
 ET
-
 endstream
 endobj
 xref
-0 16
-0000000000 65535 f 
-0000000010 00000 n 
-0000000062 00000 n 
-0000000157 00000 n 
-0000000230 00000 n 
-0000000359 00000 n 
-0000002591 00000 n 
-0000002720 00000 n 
-0000005165 00000 n 
-0000005294 00000 n 
-0000007378 00000 n 
-0000007509 00000 n 
-0000009441 00000 n 
-0000009572 00000 n 
-0000011856 00000 n 
-0000011987 00000 n 
-trailer
-<< /Size 16 /Root 1 0 R >>
-startxref
-12973
+0 16`n0000000000 65535 f 
+0000000009 00000 n `n0000000059 00000 n `n0000000150 00000 n `n0000000221 00000 n `n0000000348 00000 n `n0000002668 00000 n `n0000002795 00000 n `n0000005341 00000 n `n0000005468 00000 n `n0000007776 00000 n `n0000007905 00000 n `n0000010018 00000 n `n0000010147 00000 n `n0000012588 00000 n `n0000012717 00000 n `ntrailer
+<< /Size 16 /Root 1 0 R >>`nstartxref
+13077
 %%EOF
