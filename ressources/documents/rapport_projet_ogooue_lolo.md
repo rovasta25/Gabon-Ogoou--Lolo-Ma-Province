@@ -9,7 +9,7 @@
 - **Nom** : MOUANDZA MIKOUMOU Rova Chrismi Richie
 - **Niveau** : Licence 2
 - **Filiere** : Genie Logiciel
-- **Etablissement** : Institut des Sciences et Techniques (IST), Libreville
+- **Etablissement** : Institut Superieur de Technologie (IST), Libreville
 - **Annee academique** : 2025-2026
 
 ## Introduction
