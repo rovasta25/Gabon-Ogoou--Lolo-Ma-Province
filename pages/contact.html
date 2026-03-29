@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -96,13 +96,12 @@
 
             <!-- Navigation -->
             <div class="form-group">
-              <label class="form-label" for="navigation">Comment trouvez-vous la navigation ? <span class="req">*</span></label>
-              <select class="form-control" id="navigation">
-                <option value="">— Sélectionner —</option>
-                <option value="simple">Simple</option>
-                <option value="correcte">Correcte</option>
-                <option value="compliquée">Compliquée</option>
-              </select>
+              <label class="form-label">Comment trouvez-vous la navigation ? <span class="req">*</span></label>
+              <div class="radio-group" id="navigationGroup">
+                <label class="radio-item"><input type="radio" name="navigation" value="tres_simple" checked> Très simple</label>
+                <label class="radio-item"><input type="radio" name="navigation" value="correcte"> Correcte</label>
+                <label class="radio-item"><input type="radio" name="navigation" value="compliquee"> Compliquée</label>
+              </div>
               <div class="field-err" id="err-navigation">Veuillez sélectionner une option.</div>
             </div>
 

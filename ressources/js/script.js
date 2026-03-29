@@ -83,11 +83,10 @@ function handleSubmit(e) {
   var valid = true;
   var emailField = document.getElementById('email');
   var ddnField = document.getElementById('ddn');
-  var navigationField = document.getElementById('navigation');
   var formContent = document.getElementById('formContent');
   var successMsg = document.getElementById('successMsg');
 
-  if (!emailField || !ddnField || !navigationField || !formContent || !successMsg) {
+  if (!emailField || !ddnField || !formContent || !successMsg) {
     return;
   }
 
@@ -101,10 +100,14 @@ function handleSubmit(e) {
   setFieldState('ddn', 'err-ddn', ddnOk);
   if (!ddnOk) valid = false;
 
-  var nav = navigationField.value;
-  var navOk = nav !== '';
-  setFieldState('navigation', 'err-navigation', navOk);
-  if (!navOk) valid = false;
+  var navVal = document.querySelector('input[name="navigation"]:checked');
+  var navErr = document.getElementById('err-navigation');
+  if (!navVal) {
+    if (navErr) navErr.classList.add('show');
+    valid = false;
+  } else {
+    if (navErr) navErr.classList.remove('show');
+  }
 
   var connuVal = document.querySelector('input[name="connu"]:checked');
   var connuErr = document.getElementById('err-connu');
@@ -425,12 +428,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  var navEl = document.getElementById('navigation');
-  if (navEl) {
-    navEl.addEventListener('change', function () {
-      setFieldState('navigation', 'err-navigation', this.value !== '');
+  document.querySelectorAll('input[name="navigation"]').forEach(function(radio) {
+    radio.addEventListener('change', function () {
+      var navErr = document.getElementById('err-navigation');
+      if (navErr) navErr.classList.remove('show');
     });
-  }
+  });
 
   const initialSearch = new URLSearchParams(window.location.search).get('search');
   if (initialSearch && navSearchInput) {
